@@ -56,23 +56,23 @@ $ npm install
 
 ### Running the App
 
-# Development mode
+```bash
+# development mode
+$ npm run start
 
-npm run start
-
-# Watch mode
-
-npm run start:dev
+# watch mode
+$ npm run start:dev
+```
 
 ## Set up environment variables
 
 Create a .env file in the root directory and add your database configuration.
 
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=your-username
-DB_PASSWORD=your-password
-DB_NAME=your-database-name
+- DB_HOST=localhost
+- DB_PORT=5432
+- DB_USERNAME=your-username
+- DB_PASSWORD=your-password
+- DB_NAME=your-database-name
 
 Replace `your-username`, `your-password`, and `your-database-name` with your actual PostgreSQL credentials.
 

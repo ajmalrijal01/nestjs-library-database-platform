@@ -24,50 +24,101 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project is a RESTful API for managing a library system, built using NestJS, PostgreSQL, and Sequelize. The API supports operations for managing books and authors, including creating, reading, updating, and deleting records. It also provides features for searching, filtering, and sorting books.
 
-## Installation
+## Features
+
+- **Books Management**: Create, Read, Update, and Delete books with associated authors.
+- **Author Management**: Create, Read, Update, and Delete authors.
+- **Search and Filters**: Search for books by title, filter by genre, publication date, and date ranges.
+- **Sorting**: Sort books by title, genre, or publication date.
+- **Pagination**: List books with pagination support.
+- **Validation**: Ensure data integrity with validation on input fields.
+
+## Technologies Used
+
+- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **PostgreSQL**: A powerful, open-source relational database system.
+- **Sequelize**: A promise-based Node.js ORM for PostgreSQL, used for database interactions.
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js**: Ensure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
+- **PostgreSQL**: Ensure you have PostgreSQL installed and running.
+
+### Install Dependencies
 
 ```bash
 $ npm install
-```
 
 ## Running the app
 
-```bash
 # development
 $ npm run start
 
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
+## Set up environment variables
 
-## Test
+Create a .env file in the root directory and add your database configuration.
 
-```bash
-# unit tests
-$ npm run test
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=your-username
+DB_PASSWORD=your-password
+DB_NAME=your-database-name
 
-# e2e tests
-$ npm run test:e2e
+## API Endpoints
 
-# test coverage
-$ npm run test:cov
-```
+### Books
 
-## Support
+- **Create a Book**
+- POST http://localhost:3000/books
+- Request body: CreateBookDto
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **Get a Specific Book**
+- GET http://localhost:3000/books/:id
+- Response: Book details along with associated author
 
-## Stay in touch
+- **List All Book**
+- GET http://localhost:3000/books
+- Query parameters: search, genre, publicationDate, sortBy, sortOrder, page, limit, startDate, endDate
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- **Update a Book**
+- PATCH http://localhost:3000/books/:id
+- Request body: Partial UpdateBookDto
+
+- **Delete a Book**
+- DELETE http://localhost:3000/books/:id
+
+### Author
+
+- **Create an Author**
+- POST http://localhost:3000/authors
+- Request body: CreateAuthorDto
+
+- **Get a Specific Author**
+- GET http://localhost:3000/authors/:id
+
+- **List All Authors**
+- GET http://localhost:3000/authors
+- Query parameters: search, page, limit
+
+- **Update an Author**
+- PATCH http://localhost:3000/authors/:id
+- Request body: Partial UpdateAuthorDto
+
+- **Delete an Author**
+- DELETE http://localhost:3000/authors/:id
 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+```
+
+## Contact
+
+For any questions or issues, please contact ajmalrijal01@gmail.com.

@@ -52,14 +52,17 @@ This project is a RESTful API for managing a library system, built using NestJS,
 
 ```bash
 $ npm install
+```
 
-## Running the app
+### Running the App
 
-# development
-$ npm run start
+# Development mode
 
-# watch mode
-$ npm run start:dev
+npm run start
+
+# Watch mode
+
+npm run start:dev
 
 ## Set up environment variables
 
@@ -70,6 +73,8 @@ DB_PORT=5432
 DB_USERNAME=your-username
 DB_PASSWORD=your-password
 DB_NAME=your-database-name
+
+Replace `your-username`, `your-password`, and `your-database-name` with your actual PostgreSQL credentials.
 
 ## API Endpoints
 
@@ -117,7 +122,6 @@ DB_NAME=your-database-name
 ## License
 
 Nest is [MIT licensed](LICENSE).
-```
 
 ## Contact
 
